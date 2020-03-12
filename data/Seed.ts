@@ -4,12 +4,13 @@ export const elephant = {name: 'Save The Elephant', funding_required: 4000, imag
 export const rainforest = {name: 'Rainforest Conservation', funding_required: 50000, image: 'na'}
 export const leopard = {name: 'Snow Leopard Protection', funding_required: 300, image: 'na'}
 
+import { Project } from "../src/Project" 
 
 export const data: Array<Project> = [rhino, elephant, rainforest, leopard];
 
-export interface Project {
-    name: string;
-    funding_required: number;
-    image: string;
-}
+// export interface Project {
+//     name: string;
+//     funding_required: number;
+//     image: string;
+// }
 

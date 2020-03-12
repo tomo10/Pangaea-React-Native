@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { Project } from '../data/Seed';
+import { Project } from './Project';
 import Row from './components/Row';
 
 interface Props {
@@ -15,14 +15,14 @@ interface Props {
 //     )
 // }
 
-export const List: React.FC<Props> = ({ projects }) => {
+export const List: React.FC<Props> = ({ projects, navigation }) => {
 
     return (
         <View>
             {
             projects.map((project, key) => (
                 <Row 
-                {...{project, key}}
+                {...{project, key, navigation}}
                 />
             ))
             }

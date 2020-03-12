@@ -5,14 +5,28 @@ import {
 
 
 
-export default ({ project: {image}}: ImageProps) => {
+export default ({ project }: ImageProps) => {
 
     
         return (
-            <View style={[styles.container, {transform: [{ scale }] }]}>
+            <View style={[styles.container]}>
                 <View
-                    style={{ ...StyleSheet.absoluteFillObject, backgroundColor: "black", opacity }}
+                    style={{ ...StyleSheet.absoluteFillObject, backgroundColor: "black" }}
                 />
             </View>
         )
     }
+
+
+const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          backgroundColor: "black",
+        },
+        text: {
+            color: 'white'
+        },
+        header: {
+            marginTop: 24
+        }
+      });

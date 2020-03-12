@@ -1,32 +1,17 @@
 import * as React from "react";
 import { View, StyleSheet, Text, StatusBar, SafeAreaView } from "react-native";
-import Image from './Image';
-import Content from './Content';
-// import { Project } from "../data/Seed";
 
-export interface Project {
-    name: string;
-    funding_required: number;
-    image: string;
-}
 
-interface ProjectProps {
-    project: Project;
-}
-
-export default ({route}) => {
-    const { project } = route.params;
+export default () => {
 
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" hidden={false} backgroundColor="#6a51ae" />
-            <Image {...{project}} />
-            <Content {...{project}} />
+            <Text style={styles.text}>SETTINGS</Text>
         </SafeAreaView>
     )
 }
 
-// export default Project;
 
 
 const styles = StyleSheet.create({
