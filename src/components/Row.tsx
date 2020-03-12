@@ -3,11 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather as Icon } from "@expo/vector-icons";
 
 import { Project } from "../Project";
-
+import { MainStackNavProps } from '../MainParamList';
 // import { useNavigation } from "react-navigation-hooks";
 
 
-interface RowProps {
+interface RowProps extends MainStackNavProps {
   project: Project;
 }
 

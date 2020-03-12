@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Project } from './Project';
 import Row from './components/Row';
+import { MainStackNavProps } from './MainParamList';
 
 interface Props {
     projects: Array<Project>;
@@ -15,7 +16,7 @@ interface Props {
 //     )
 // }
 
-export const List: React.FC<Props> = ({ projects, navigation }) => {
+export const List = ({ projects, navigation}: MainStackNavProps<"Home">) => {
 
     return (
         <View>

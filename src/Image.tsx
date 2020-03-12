@@ -2,17 +2,24 @@ import * as React from "react";
 import {
   Image, StyleSheet, View
 } from "react-native";
+import { Project } from "./Project";
 
+interface ImageProps {
+    project: Project;
+}
 
-
-export default ({ project }: ImageProps) => {
+export default ({ project: {image} }: ImageProps) => {
 
     
         return (
             <View style={[styles.container]}>
-                <View
-                    style={{ ...StyleSheet.absoluteFillObject, backgroundColor: "black" }}
-                />
+                <Image 
+                    source={{uri: image}} 
+                    style={{
+                        height: '45%',
+                        width: '100%'
+                    }}
+                    />
             </View>
         )
     }
@@ -20,13 +27,9 @@ export default ({ project }: ImageProps) => {
 
 const styles = StyleSheet.create({
         container: {
-          flex: 1,
-          backgroundColor: "black",
-        },
-        text: {
-            color: 'white'
-        },
-        header: {
-            marginTop: 24
+            ...StyleSheet.absoluteFillObject,
+            // height: '30%',
+            // width: '100%',
+            // backgroundColor: 'white'
         }
       });

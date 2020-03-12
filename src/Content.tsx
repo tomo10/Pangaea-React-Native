@@ -19,7 +19,7 @@ export default ({project}: ContentProps) => {
             <View style={styles.header}>
                 {/* <Header {...{event, y}} />
                 <Reply /> */}
-                <Text style={styles.text}>{project.name}</Text>
+                {/* <Text style={styles.text}>{project.name}</Text> */}
             </View>
         </ScrollView>
     )
