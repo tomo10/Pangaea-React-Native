@@ -4,7 +4,7 @@ import { Project } from './Project';
 import Row from './components/Row';
 import { MainStackNavProps } from './MainParamList';
 
-interface Props {
+export interface ListProps {
     projects: Array<Project>;
 }
 

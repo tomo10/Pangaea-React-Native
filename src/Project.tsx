@@ -1,28 +1,34 @@
 import * as React from "react";
 import { View, StyleSheet, Text, StatusBar, SafeAreaView } from "react-native";
+import Animated from "react-native-reanimated";
 import Image from './Image';
 import Content from './Content';
-// import { Project } from "../data/Seed";
+
+export interface User {
+    name: string;
+}
 
 export interface Project {
     name: string;
     funding_required: number;
     image: string;
+    donors: User[];
 }
 
-interface ProjectProps {
+export interface ProjectProps {
     project: Project;
 }
 
 export default ({route}) => {
     const { project } = route.params;
+    const y = new Animated.Value(0);
 
     return (
-        <SafeAreaView style={styles.container}>
-            <StatusBar barStyle="light-content" hidden={false} backgroundColor="#6a51ae" />
-            <Image {...{project}} />
-            <Content {...{project}} />
-        </SafeAreaView>
+        <View style={styles.container}>
+            {/* <StatusBar barStyle="light-content" hidden={false} backgroundColor="red" /> */}
+            <Image {...{project, y}} />
+            <Content {...{project, y}} />
+        </View>
     )
 }
 
@@ -31,6 +37,7 @@ export default ({route}) => {
 
 const styles = StyleSheet.create({
     container: {
+    // marginTop: 100,
       flex: 1,
       backgroundColor: "black",
     },

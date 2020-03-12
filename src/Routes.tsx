@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
-import { MainParamList} from '../src/MainParamList';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { MainParamList } from '../src/MainParamList';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 import Home from './Home';
@@ -42,7 +42,7 @@ const AppStackScreen = () => (
     </AppStack.Navigator>
 )
 
-export const Routes: React.FC<RoutesProps> = ({}) => {
+export const Routes: React.FC = ({}) => {
 
     return (
         <NavigationContainer>

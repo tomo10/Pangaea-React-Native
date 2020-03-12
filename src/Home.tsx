@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
-import { Dimensions } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView, Dimensions } from 'react-native';
 import { data } from '../data/Seed'
 import { LinearGradient } from "expo-linear-gradient";
 
 import { List } from './List';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { MainParamList } from './MainParamList';
+import { MainStackNavProps } from './MainParamList';
 
 const { height, width } = Dimensions.get("window");
 const picHeight = height / 3;
@@ -18,7 +17,7 @@ const mapProjects = <T extends {}>(arr: T) => {
 
 
 
-const Home = ({navigation}: { navigation: StackNavigationProp<MainParamList, 'Home'> }) => {
+const Home = ({navigation}: MainStackNavProps<'Home'>) => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -42,14 +41,12 @@ const Home = ({navigation}: { navigation: StackNavigationProp<MainParamList, 'Ho
     );
 }
 
-export default Home
+export default Home;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'black',
-        // alignItems: 'center',
-        // justifyContent: 'center',
+        backgroundColor: 'black'
       },
     title: {
         textAlign: "center",
