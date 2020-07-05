@@ -18,7 +18,7 @@ const { interpolate, Extrapolate } = Animated;
 
 
 export default ({ project: {image}, y }: ImageProps) => {
-    console.log('ARE YOU EVEN FUCKING MOUNTING YOU CUNT?', image)
+
     const scale: any = interpolate(y, {
         inputRange: [-MAX_IMAGE_HEIGHT, 0],
         outputRange: [4, 1],
@@ -42,13 +42,23 @@ export default ({ project: {image}, y }: ImageProps) => {
     }
 
     const styles = StyleSheet.create({
+        // container: {
+        //   ...StyleSheet.absoluteFillObject,
+        //   height: MAX_IMAGE_HEIGHT + BUTTON_HEIGHT * 2,
+        // },
+        // image: {
+        //   ...StyleSheet.absoluteFillObject,
+        //   width: undefined,
+        //   height: undefined,
+        // },
         container: {
-          ...StyleSheet.absoluteFillObject,
-          height: MAX_IMAGE_HEIGHT + BUTTON_HEIGHT * 2,
-        },
-        image: {
-          ...StyleSheet.absoluteFillObject,
-          width: undefined,
-          height: undefined,
-        },
+            ...StyleSheet.absoluteFillObject,
+            height: MAX_IMAGE_HEIGHT,
+            backgroundColor: 'green'
+          },
+          image: {
+            ...StyleSheet.absoluteFillObject,
+            width: undefined,
+            height: undefined,
+          },
       });

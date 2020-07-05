@@ -7,6 +7,7 @@ export type MainParamList = {
     Home: undefined;
     List: ListProps;
     Project: ProjectProps;
+    Calendar: undefined;
 }
 
 // a helper so dont have to pass this in to every component that needs it

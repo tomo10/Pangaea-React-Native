@@ -8,7 +8,7 @@ import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 import Home from './Home';
 import Project from './Project';
-import Settings from './Settings';
+import Calendar from './Calendar';
 
 const AppStack = createStackNavigator<MainParamList>();
 const Tabs = createBottomTabNavigator<MainParamList>();
@@ -55,7 +55,7 @@ export const Routes: React.FC = ({}) => {
                     iconName = focused
                       ? 'ios-home'
                       : 'ios-home';
-                  } else if (route.name === 'Settings') {
+                  } else if (route.name === 'Calendar') {
                     iconName = focused ? 'ios-list-box' : 'ios-list';
                   }
       
@@ -71,7 +71,7 @@ export const Routes: React.FC = ({}) => {
              
             >
                 <Tabs.Screen name="Home" component={AppStackScreen}  />
-                <Tabs.Screen name="Settings" component={Settings} />
+                <Tabs.Screen name="Calendar" component={Calendar} />
             </Tabs.Navigator>
         </NavigationContainer>
       );

@@ -33,6 +33,9 @@ export default ({project, y}: ContentProps) => {
       });
 
     return (
+        // <View style={styles.container}>
+
+        // </View>
         <Animated.ScrollView
             onScroll={onScroll({ y })}
             style={styles.container}
@@ -52,16 +55,8 @@ export default ({project, y}: ContentProps) => {
                 />
                 </Animated.View>
                 <View style={styles.artistContainer}>
-                <Animated.Text style={[styles.artist, { opacity }]}>{project.name}</Animated.Text>
+                    <Animated.Text style={[styles.artist, { opacity }]}>{project.name}</Animated.Text>
                 </View>
-            </View>
-            <View style={styles.header}>
-             
-            </View>
-            <View style={styles.header}>
-                {/* <Header {...{event, y}} />
-                <Reply /> */}
-                {/* <Text style={styles.text}>{project.name}</Text> */}
             </View>
             <View style={styles.donors}>
                 {

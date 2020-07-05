@@ -1,5 +1,12 @@
 
-export const rhino = {name: 'Black Rhino Project', funding_required: 1000, image: 'https://lh3.googleusercontent.com/proxy/wX5t9E6W7B9ROjV7gw11pp8OX5PC8neRJAPgho1mTXcUmkIm_837JheKw43seAeH9HiP42kkWsxQAGZc47km328ASWA7-UHuK_tUFqL-GKrDa47ONUPynaoqWSBKVY9NlJ-YwJkRgf4TKD59zAMpdCf8gRci1MxkD9TmBIcjJPn8gb4a-bDZ48RYVDWzOL0Zcyyfmmx4Z2yo', donors: [
+export const rhino = {
+    name: 'Black Rhino Project', 
+    funding_required: 1000, 
+    startDate: 1585699200000,
+    endDate: 1585700300000,
+    notes: "Please donate as much as you can to save this incredible creature",
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ngorongoro_Spitzmaulnashorn_edit1crop.jpg/1200px-Ngorongoro_Spitzmaulnashorn_edit1crop.jpg', 
+    donors: [
     {name: 'Thomas'},
     {name: 'Harry'},
     {name: 'Kristina'},
@@ -15,7 +22,14 @@ export const rhino = {name: 'Black Rhino Project', funding_required: 1000, image
     {name: 'Sebastian'},
     {name: 'Max'},
 ]}
-export const elephant = {name: 'Save The Elephant', funding_required: 4000, image: 'https://c402277.ssl.cf1.rackcdn.com/photos/14206/images/hero_small/WW187785.jpg?1576774644', donors: [
+export const elephant = {
+    name: 'Save The Elephant', 
+    funding_required: 4000, 
+    startDate: 1585699200000,
+    endDate: 1585700300000,
+    notes: "Please donate as much as you can to save this incredible elephant",
+    image: 'https://c402277.ssl.cf1.rackcdn.com/photos/14206/images/hero_small/WW187785.jpg?1576774644', 
+    donors: [
     {name: 'Thomas'},
     {name: 'Harry'},
     {name: 'Kristina'},
